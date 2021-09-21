@@ -1,4 +1,4 @@
-# Dictionary for the days
+# Dictionary for the items
 items = {
     1: "A partridge in a pear tree",
     2: "Two turtle doves",
@@ -13,7 +13,7 @@ items = {
     11: "Eleven pipers piping",
     12: "Twelve drummers drumming"
 }
-
+# Dictionary for the days
 day_of_Christmas = {
     1: "First",
     2: "Second",
@@ -28,7 +28,7 @@ day_of_Christmas = {
     11: "Eleventh",
     12: "Twelfth"
 }
-
+#While loop to print the lyrics
 day = 1
 while day <= 12:
     print(f"On the {day_of_Christmas[day]} day of Christmas, my true love gave to me\n{items[day]}\n")
