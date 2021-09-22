@@ -142,6 +142,11 @@ scene = {
         |'''
 }
 
+# Selecting a random word.
+word = RandomWords().get_random_word(hasDictionaryDef="true", includePartOfSpeech="noun,verb", minLength=4, maxLength=8)
+# testWord = "devildog"
+# word = testWord
+
 # Credit to ChickenParm for a function to make the game not junk up the terminal
 def clear():
     if name == 'nt':
@@ -161,11 +166,6 @@ def update(brd, wrd, ltr):
     else:
         key += 1
     return wrd, brd
-
-# Selecting a random word.
-word = RandomWords().get_random_word()
-# testWord = "devildog"
-# word = testWord
 
 # Important variables
 key = 0
