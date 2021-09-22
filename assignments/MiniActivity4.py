@@ -1,3 +1,5 @@
+# Create a while loop that prints the 12 days of Christmas
+
 # Dictionary for the items
 items = {
     1: "A partridge in a pear tree",
@@ -33,3 +35,15 @@ day = 1
 while day <= 12:
     print(f"On the {day_of_Christmas[day]} day of Christmas, my true love gave to me\n{items[day]}\n")
     day += 1
+
+
+
+
+# Create a while loop that prints the sum of integers from a list
+nums = [1, 2, 3]
+i = 0
+total = 0
+while i < len(nums):
+    total += nums[i]
+    i += 1
+print(total)
