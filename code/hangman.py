@@ -1,5 +1,5 @@
 from os import system, name
-import random
+from random_word import RandomWords
 
 ###############################################################
 ###############################################################
@@ -12,14 +12,27 @@ import random
 ### - [X] Validate Guesses and Update Scene                 ###
 ###         - Clear Scene After Each Guess                  ###
 ### - [X] Exchange and Handle Letters on Board              ###
+### - [X] Remove wordlist and use RandomWords               ###
 ###                                                         ###
 ### **EXTRAS** (Future Updates)                             ###
-### - [ ] Banner                                            ###
+### - [X] Banner                                            ###
 ### - [ ] Beginning UI                                      ###
 ###         - Select Difficulty                             ###
+###             - Use phrases instead of words              ###
+###         - Categories?                                   ###
 ###                                                         ###
 ###############################################################
 ###############################################################
+
+# Banner
+banner = '''
+ _   _
+| | | | __ _ _ __   __ _ _ __ ___   __ _ _ __
+| |_| |/ _` | '_ \ / _` | '_ ` _ \ / _` | '_ \ 
+|  _  | (_| | | | | (_| | | | | | | (_| | | | |
+|_| |_|\__,_|_| |_|\__, |_| |_| |_|\__,_|_| |_|
+                   |___/
+'''
 
 # Dictionary for the scenes
 scene = {
@@ -128,12 +141,6 @@ scene = {
         |
         |'''
 }
-# Sample wordlist (use RandomWords in the future?)
-wordlist = (
-    "apt", "ask", "bat", "bad", "bag", "cat", "cap", "cab", "dad", "dab", "fan", "fat", "fad", "gap", "gab", "gal",
-    "gas", "ham", "has", "had", "hat", "jab", "jam", "lab", "lad", "lag", "lap", "man", "mad", "mat", "nap", "pan", "pad",
-    "pal", "ran", "ram", "rag", "rat", "sad", "sag", "sat", "sap", "tab", "tan", "tad", "tag", "tap", "van", "vat", "yam", "zap"
-)
 
 # Credit to ChickenParm for a function to make the game not junk up the terminal
 def clear():
@@ -155,11 +162,12 @@ def update(brd, wrd, ltr):
         key += 1
     return wrd, brd
 
-# Selecting a word from the wordlist above.
-# Update to better method later.
-word = random.choice(wordlist)
+# Selecting a random word.
+word = RandomWords().get_random_word()
 # testWord = "devildog"
 # word = testWord
+
+# Important variables
 key = 0
 board = list("_" * len(word))
 deadWord = ("-" * len(word))
@@ -168,6 +176,7 @@ deadWord = ("-" * len(word))
 while word.count("-") < len(word):
     # Keeping the game board clean
     clear()
+    print(banner)
     # Hangman scenes
     print(scene[key])
     # Word to be guessed
@@ -189,9 +198,11 @@ while word.count("-") < len(word):
 # Ending the Game Loop
 if word == deadWord:
     clear()
+    print(banner)
     print(scene[key])
     print(f"Secret Word: ", *board)
     print("\tYOU WIN!!!")
 else:
     clear()
+    print(banner)
     print(scene[6], "GAME OVER!!!")
