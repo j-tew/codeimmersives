@@ -158,7 +158,8 @@ def update(brd, wrd, ltr):
 # Selecting a word from the wordlist above.
 # Update to better method later.
 word = random.choice(wordlist)
-#testWord = "devildog"
+# testWord = "devildog"
+# word = testWord
 key = 0
 board = list("_" * len(word))
 deadWord = ("-" * len(word))
@@ -189,6 +190,7 @@ while word.count("-") < len(word):
 if word == deadWord:
     clear()
     print(scene[key])
+    print(f"Secret Word: ", *board)
     print("\tYOU WIN!!!")
 else:
     clear()
