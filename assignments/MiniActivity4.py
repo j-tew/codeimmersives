@@ -28,7 +28,7 @@ day_of_Christmas = {
     11: "Eleventh",
     12: "Twelfth"
 }
-#While loop to print the lyrics
+# While loop to print the lyrics
 day = 1
 while day <= 12:
     print(f"On the {day_of_Christmas[day]} day of Christmas, my true love gave to me\n{items[day]}\n")
