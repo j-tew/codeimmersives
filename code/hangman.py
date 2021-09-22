@@ -143,7 +143,7 @@ scene = {
 }
 
 # Selecting a random word.
-word = RandomWords().get_random_word(hasDictionaryDef="true", includePartOfSpeech="noun,verb", minLength=4, maxLength=8)
+word = str(RandomWords().get_random_word(hasDictionaryDef="true", includePartOfSpeech="noun,verb", minLength=4, maxLength=8))
 # testWord = "devildog"
 # word = testWord
 
