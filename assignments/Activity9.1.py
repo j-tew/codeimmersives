@@ -9,8 +9,6 @@ def mySort(l):
             if i == min(l):
                 new += [i]
                 l.remove(i)
-            else:
-                continue
     return new
 
 print(mySort(nums))
