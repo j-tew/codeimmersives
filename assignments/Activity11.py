@@ -1,3 +1,5 @@
+# Create a function that takes an integer as a parameter and generates
+# a list of that size with random numbers from 0-1024
 from random import getrandbits
 
 def randList(num):
