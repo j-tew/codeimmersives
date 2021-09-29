@@ -12,6 +12,7 @@ def curvedGrades(grades):
     # Add the curve to each grade and put it in the new list
     for grade in grades:
         if grade != 100:
+            # Round the ouput to be pretty
             newGrade = round((grade + curve), 1)
             newGrades.append(newGrade)
         # If the grade is already outstanding, keep it
