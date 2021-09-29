@@ -2,7 +2,7 @@
 from statistics import stdev
 
 # List of Grades
-exam_grades = [74, 62, 91, 92, 73, 65, 100, 45, 57]
+exam_grades = [74, 62, 91, 92, 73, 65, 100, 45, 57, 98]
 
 def curvedGrades(grades):
     # Getting the standard deviation
@@ -14,6 +14,9 @@ def curvedGrades(grades):
         if grade != 100:
             # Round the ouput to be pretty
             newGrade = round((grade + curve), 1)
+            # If the new grade exceeds max grade, just make it 100
+            if newGrade > 100:
+                newGrade = 100
             newGrades.append(newGrade)
         # If the grade is already outstanding, keep it
         else:
