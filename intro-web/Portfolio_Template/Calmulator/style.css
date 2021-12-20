@@ -45,6 +45,7 @@ button:hover {
     background-color: inherit;
     margin: auto;
     margin-top: 5%;
+    margin-bottom: 5%;
     position: sticky;
     width: 350px;
     padding-left: 20px;
@@ -91,4 +92,14 @@ button:hover {
 
 #decimal {
     border-color: #88b3b3;
+}
+
+#back {
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%);
+    width: 350px;
+    border: solid 5px #4c566a;
+    padding: 10px;
+    font-size: 1rem;
 }
