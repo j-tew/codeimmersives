@@ -28,7 +28,7 @@ const cycleCards = () => {
         }
     }
     else if (playerDeck.length === 0) {
-        if (confirm('Victory!\nPlay Again?')) {
+        if (confirm('Defeat!\nPlay Again?')) {
             location.reload()
         }
     }
