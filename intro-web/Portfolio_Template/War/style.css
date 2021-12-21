@@ -10,8 +10,9 @@
 
 body {
     background-color: #202124;
-    color: slategrey;
+    color: lightslategray;
     font-family: 'Norse';
+    font-weight: bold;
 }
 
 img {
