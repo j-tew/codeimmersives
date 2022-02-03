@@ -1,12 +1,14 @@
 from Bank import Account
 
 if __name__ == '__main__':
+    # Get the user's name
     name = input('''
     Welcome to The Bank! Let's get you setup with a Checking and a Savings.
 
     Please enter your name: 
     ''')
-
+    
+    # Create their accounts
     checking = Account(name, 'Checking')
     savings = Account(name, 'Savings')
 
@@ -17,8 +19,9 @@ if __name__ == '__main__':
     Checking Account Number: {checking.number}
     Savings Account Number: {savings.number}''')
     
-    while True:
-
+    # App UI
+    while True: 
+        # Selecting the account to perform transactions with
         account_selection = input('''
     Which account are we working with?
 
@@ -39,6 +42,7 @@ if __name__ == '__main__':
                 print('\n    Please enter a valid selection.')
                 continue
 
+        # Selecting the type of transaction
         task_selection = input(f'''
     How can we help you with your {account.type} today?
 
