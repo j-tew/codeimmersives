@@ -1,0 +1,11 @@
+{% extends 'base.html' %}
+{% block title %}Home{% endblock %}
+{% block content %}
+<h1>Welcome to my random API</h1>
+<h2>Today's Lucky Numbers:</h2>
+    <ul>
+    {% for num in lucky_nums %}
+    <li>{{ num }}</li>
+    {% endfor %}
+    </ul>
+{% endblock %}
